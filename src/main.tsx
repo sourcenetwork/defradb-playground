@@ -11,7 +11,8 @@
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import { instantiate } from '@sourcenetwork/acp-js';
+import '@sourcenetwork/acp-js';
+import { instantiate } from '@sourcenetwork/wasm-bridge';
 
 const mode = import.meta.env.VITE_PLAYGROUND_MODE;
 
