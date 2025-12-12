@@ -43,8 +43,9 @@ Runs DefraDB wasm in the browser.
 **Steps:**
 - Build the **defradb.wasm** binary:
   ```bash
-  GOOS=js GOARCH=wasm go build -o playground/defradb.wasm ./cmd/defradb
+  GOOS=js GOARCH=wasm go build -C ../defradb -o ../defradb-playground/defradb.wasm ./cmd/defradb
   ```
+
 - Then run one of the following commands:
 
 #### Local ACP (default)

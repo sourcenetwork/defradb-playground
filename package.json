@@ -16,7 +16,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@sourcenetwork/acp-js": "1.0.4",
+    "@sourcenetwork/acp-js": "1.0.5",
+    "@sourcenetwork/wasm-bridge": "1.0.0",
     "graphiql": "^4.1.2",
     "graphql": "^16.10.0",
     "lucide-react": "^0.536.0",
