@@ -50,8 +50,7 @@ export const useGraphiQLConfig = () => {
       ];
       return { fetcher: wasmFetcher, plugins };
     } else {
-      const baseUrl = import.meta.env.DEV ? 'http://localhost:9181' : '';
-      const fetcher = createGraphiQLFetcher({ url: `${baseUrl}/api/v0/graphql` });
+      const fetcher = createGraphiQLFetcher({ url: '/api/v0/graphql' });
       const plugins = [swaggerPlugin];
       return { fetcher, plugins };
     }
