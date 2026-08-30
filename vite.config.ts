@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from 'vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -9,6 +9,16 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       proxy: {
+        '/api/v0': {
+          target: env.VITE_DEFRADB_TARGET || 'http://localhost:9181',
+          changeOrigin: true,
+        },
+
+        '/openapi.json': {
+          target: env.VITE_DEFRADB_TARGET || 'http://localhost:9181',
+          changeOrigin: true,
+        },
+
         '/api': {
           target: env.VITE_API_TARGET || 'http://localhost:1317',
           changeOrigin: true,
